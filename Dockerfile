@@ -1,14 +1,14 @@
-FROM node:8-slim
-MAINTAINER Jonathan Gros-Dubois
+FROM node:10.20.0-alpine
+LABEL maintainer="Ehsan Mokhtari"
 
 LABEL version="6.1.1"
 LABEL description="Docker file for SCC State Server"
 
-RUN mkdir -p /usr/src/
-WORKDIR /usr/src/
-COPY . /usr/src/
+USER node
+WORKDIR /home/node
+COPY . .
 
-RUN npm install .
+RUN npm install --production
 
 EXPOSE 7777
 
