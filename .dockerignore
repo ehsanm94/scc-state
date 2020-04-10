@@ -1,6 +1,6 @@
-node_modules/
+.dockerignore
 .git
 .gitignore
-.dockerignore
 Dockerfile
 README.md
+node_modules/
